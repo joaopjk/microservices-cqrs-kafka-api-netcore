@@ -4,7 +4,7 @@ namespace CQRS.Core.Domain
 {
     public abstract class AggregateRoot
     {
-        public Guid Id { get; protected set; }
+        public Guid _id { get; protected set; }
         private readonly List<BaseEvent> _changes = new();
         public int Version { get; set; } = -1;
         public IEnumerable<BaseEvent> GetUncommittedChanges() => new List<BaseEvent>(_changes);
