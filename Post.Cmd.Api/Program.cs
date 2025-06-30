@@ -1,9 +1,12 @@
 using CQRS.Core.Domain;
+using CQRS.Core.Infrastructure;
 using Post.Cmd.Infrastructure.Repositories;
+using Post.Cmd.Infrastructure.Stores;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IEventStoreRepository, EventStoreRepository>();
+builder.Services.AddScoped<IEventStore, EventStore>();
 // Add services to the container.
 
 builder.Services.AddControllers();
