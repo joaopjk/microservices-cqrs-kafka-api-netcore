@@ -15,12 +15,13 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7221;http://localhost:5086",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "MONGO_DB_CONNECTION_STRING": "mongodb://localhost:27017",
-        "DATABASE": "SocialMedia",
-        "COLLECTION": "EventStore"
-      }
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "MONGO_DB_CONNECTION_STRING": "mongodb://localhost:27017",
+            "DATABASE": "SocialMedia",
+            "COLLECTION": "EventStore",
+            "BOOTSTRAP_SERVER": "localhost:9092"
+        }
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -30,7 +31,8 @@
             "ASPNETCORE_ENVIRONMENT": "Development",
             "MONGO_DB_CONNECTION_STRING": "mongodb://localhost:27017",
             "DATABASE": "SocialMedia",
-            "COLLECTION": "EventStore"
+            "COLLECTION": "EventStore",
+            "BOOTSTRAP_SERVER": "localhost:9092"
         }
     }
   }
