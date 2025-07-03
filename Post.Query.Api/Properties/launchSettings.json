@@ -15,17 +15,19 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7177;http://localhost:5005",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "SQL_CONNECTIONSTRING": "Server=localhost,1433;Database=SocialMedia;User Id=sa;Password=$tr0ngS@P@ssw0rd02"
+        }
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "SQL_CONNECTIONSTRING": "Server=localhost,1433;Database=SocialMedia;User Id=sa;Password=$tr0ngS@P@ssw0rd02"
+        }
     }
   }
 }
