@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Post.Query.Domain.DataAccess;
+using Post.Query.Domain.Repositories;
+using Post.Query.Infrastructure.Handlers;
+using Post.Query.Infrastructure.Repositories;
+
 #pragma warning disable ASP0000
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +18,10 @@ builder.Services.AddSingleton<DataBaseContextFactory>(new DataBaseContextFactory
 
 var dataContext = builder.Services.BuildServiceProvider().GetRequiredService<DataBaseContext>();
 dataContext.Database.EnsureCreated();
+
+builder.Services.AddScoped<IPostRepository, PostRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IEventHandler, Post.Query.Infrastructure.Handlers.EventHandler>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
